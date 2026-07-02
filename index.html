@@ -4,14 +4,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>사주 x MBTI x 별자리 궁합</title>
-<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7/babel.min.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Pretendard&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  html, body { margin:0; padding:0; width:100%; overflow-x:hidden; font-family:'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; }
+  html, body { margin:0; padding:0; width:100%; overflow-x:hidden; font-family:'Jua', 'Gaegu', -apple-system, BlinkMacSystemFont, sans-serif; }
   #root { min-height:100vh; }
 </style>
 </head>
@@ -1076,20 +1076,46 @@ root.render(<App />);
 
 <script>
 (function () {
-  try {
-    var src = document.getElementById('app-source').textContent;
-    var compiled = Babel.transform(src, {
-      presets: [['react', { runtime: 'classic' }], 'env']
-    }).code;
-    var script = document.createElement('script');
-    script.textContent = compiled;
-    document.body.appendChild(script);
-  } catch (e) {
+  function showError(msg) {
     document.getElementById('root').innerHTML =
       '<div style="padding:24px;color:#b91c1c;font-family:monospace;white-space:pre-wrap;">렌더링 오류: ' +
-      (e && e.message ? e.message : e) + '</div>';
-    console.error(e);
+      msg + '</div>';
   }
+
+  function runApp() {
+    try {
+      var src = document.getElementById('app-source').textContent;
+      var compiled = Babel.transform(src, {
+        presets: [['react', { runtime: 'classic' }], 'env']
+      }).code;
+      var script = document.createElement('script');
+      script.textContent = compiled;
+      document.body.appendChild(script);
+    } catch (e) {
+      showError(e && e.message ? e.message : e);
+      console.error(e);
+    }
+  }
+
+  // CDN 스크립트가 늦게 로드되는 경우(느린 네트워크 등)를 대비해 잠시 기다렸다가 재시도
+  var tries = 0;
+  function waitForLibs() {
+    if (window.React && window.ReactDOM && window.Babel) {
+      runApp();
+    } else if (tries < 40) {
+      tries++;
+      setTimeout(waitForLibs, 150);
+    } else {
+      var missing = [];
+      if (!window.React) missing.push('React');
+      if (!window.ReactDOM) missing.push('ReactDOM');
+      if (!window.Babel) missing.push('Babel');
+      showError(
+        missing.join(', ') + ' 라이브러리를 CDN에서 불러오지 못했습니다. 네트워크 연결이나 광고 차단 설정을 확인해주세요.'
+      );
+    }
+  }
+  waitForLibs();
 })();
 </script>
 </body>
