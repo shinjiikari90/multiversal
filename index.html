@@ -17,7 +17,9 @@
 </head>
 <body>
 <div id="root"></div>
-<script type="text/babel" data-presets="react,env">
+
+<!-- JSX 소스는 브라우저가 바로 실행하지 않도록 text/plain 으로 보관하고, 아래 스크립트에서 classic 런타임으로 직접 변환합니다. -->
+<script type="text/plain" id="app-source">
 const { useState } = React;
 
 
@@ -1061,7 +1063,7 @@ function App() {
       {/* FOOTER COMMENTARY */}
       <footer className="max-w-4xl mx-auto w-full text-center py-4 text-[9px] text-slate-500 font-light leading-relaxed">
         본 검사 시스템에서 제공하는 사주 오행 정보는 천간과 지지의 배치를 역학적으로 축약 산정한 통계형 데이터이며, <br />
-        연인 뿐만 아니라 다양한 인간 관계의 성격 융합과 조화를 재미있게 즐겨볼 수 있도록 기획된 고밀도 관계 가이드입니다. <br />
+        연인 뿐만 아니라 다양한 인간 관계의 성격 융합과 조화를 재미있게 즐겨볼 수 있도록 기획된 고밀도 관계 오락용 가이드입니다. <br />
         © 2026 Cosmic Harmony Multi-verse Studio. All rights reserved.
       </footer>
     </div>
@@ -1070,6 +1072,25 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
+</script>
+
+<script>
+(function () {
+  try {
+    var src = document.getElementById('app-source').textContent;
+    var compiled = Babel.transform(src, {
+      presets: [['react', { runtime: 'classic' }], 'env']
+    }).code;
+    var script = document.createElement('script');
+    script.textContent = compiled;
+    document.body.appendChild(script);
+  } catch (e) {
+    document.getElementById('root').innerHTML =
+      '<div style="padding:24px;color:#b91c1c;font-family:monospace;white-space:pre-wrap;">렌더링 오류: ' +
+      (e && e.message ? e.message : e) + '</div>';
+    console.error(e);
+  }
+})();
 </script>
 </body>
 </html>
