@@ -386,7 +386,7 @@
 
           const colleagueAnalysis = {
             intro: `💼 비즈니스/공적 파트너로서 두 분은 '서로의 치명적 약점을 가려주는 빈틈없는 어벤져스 팀'임. ${u1.name}님이 거침없는 불도저처럼 아이디어를 내고 가속 페달을 밟으면, ${u2.name}님은 노련하게 결함을 점검하고 시스템의 브레이크와 핸들을 잡아줌. 기획자와 실행자의 완벽한 결합을 통해 높은 성과를 기대할 수 있는 우량주 조합임 미쳤지!`,
-            disaster: `🚨 동료 사이 파국 트리거: 공적인 성과나 업무 기여도를 두고 "이건 당연히 내 몫이지"라며 공치사를 지나치게 앞세우거나, 일방적인 피드백과 불투명한 커뮤니케이션으로 상대를 신뢰 관계에서 배제할 때 파국을 맞게 됨. 특히 상대방의 실수를 은근히 공개적으로 탓하는 행위는 관계 회복 불능을 만듦 ㄷㄷㄷ`,
+            disaster: `🚨 동료 사이 파국 트리거: 공적인 성과나 업무 기여도를 두고 "이건 당연히 내 몫이지"라며 공치사를 지나치게 앞세우거나, 일방적인 피드백과 불투명 한 커뮤니케이션으로 상대를 신뢰 관계에서 배제할 때 파국을 맞게 됨. 특히 상대방의 실수를 은근히 공개적으로 탓하는 행위는 관계 회복 불능을 만듦 ㄷㄷㄷ`,
             booster: `✨ 동료 증폭 꿀팁: 철저한 R&R(역할과 책임) 구분이야말로 최선의 무기임. 각자의 영역에 절대 태클을 걸지 않고, 결과물을 얻었을 땐 "파트너님 덕분에 아이디어가 현실이 되었습니다"라는 세련되고 프로페셔널한 찬사를 아끼지 마셈. 우주의 황금 동맹국처럼 엄청난 금전운과 명예운을 합작해 낼 수 있음 ㄹㅇ`
           };
 
@@ -413,23 +413,23 @@
   <!-- Alpine.js CDN (Initialization-safe script loading) -->
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="min-h-screen bg-gradient-to-tr from-[#090D1A] via-[#111827] to-[#1E112A] text-slate-100 p-4 md:p-8 flex flex-col justify-between font-sans" x-data="compatibilityApp()" x-cloak>
+<body class="min-h-screen bg-gradient-to-tr from-[#090D1A] via-[#111827] to-[#1E112A] text-slate-100 p-3 sm:p-4 md:p-8 flex flex-col justify-between font-sans overflow-x-hidden" x-data="compatibilityApp()" x-cloak>
 
   <!-- HEADER SECTION -->
-  <header class="max-w-4xl mx-auto w-full text-center py-6">
-    <div class="inline-flex items-center gap-2 bg-purple-950/75 border border-purple-500/30 px-4 py-1.5 rounded-full shadow-md text-amber-300 font-bold text-xs tracking-wider uppercase mb-3">
+  <header class="max-w-4xl mx-auto w-full text-center py-4 sm:py-6 px-2">
+    <div class="inline-flex items-center gap-2 bg-purple-950/75 border border-purple-500/30 px-3 sm:px-4 py-1.5 rounded-full shadow-md text-amber-300 font-bold text-[10px] sm:text-xs tracking-wider uppercase mb-3">
       <span>✨ Saju ✕ MBTI ✕ Zodiac Synergy Lab</span>
     </div>
-    <h1 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-pink-300 to-purple-400 tracking-tight drop-shadow-md">
+    <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-pink-300 to-purple-400 tracking-tight drop-shadow-md leading-tight">
       삼라만상 우주 융합 궁합
     </h1>
-    <p class="text-xs md:text-sm text-slate-400 mt-2 font-light">
+    <p class="text-[10px] sm:text-xs md:text-sm text-slate-400 mt-2 font-light">
       양력 생년월일시 만세력 오행과 별자리 자연 4원소, 실제 행동 심리 MBTI를 융합한 관계 분석 솔루션 💫
     </p>
   </header>
 
   <!-- MAIN CONTAINER -->
-  <main class="max-w-2xl mx-auto w-full flex-grow my-4 bg-slate-900/80 backdrop-blur-xl rounded-3xl p-6 md:p-8 shadow-2xl border border-slate-800/60 flex flex-col justify-center">
+  <main class="max-w-2xl mx-auto w-full flex-grow my-2 sm:my-4 bg-slate-900/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border border-slate-800/60 flex flex-col justify-center">
     
     <!-- TOAST ERROR MESSAGE -->
     <template x-if="errorMsg">
@@ -440,19 +440,19 @@
 
     <!-- STEP 1: WELCOME SCREEN -->
     <template x-if="step === 'welcome'">
-      <div class="text-center py-8 space-y-6">
-        <div class="text-7xl animate-bounce">🔮</div>
-        <h2 class="text-2xl md:text-3xl font-black text-white leading-snug">
+      <div class="text-center py-4 sm:py-8 space-y-4 sm:space-y-6">
+        <div class="text-5xl sm:text-7xl animate-bounce">🔮</div>
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-black text-white leading-snug">
           그 사람과 당신의 <br/>
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-pink-400">진짜 관계 주파수</span>를 측정해 드립니다!
         </h2>
-        <p class="text-slate-400 text-xs md:text-sm max-w-md mx-auto leading-relaxed">
+        <p class="text-slate-400 text-[11px] sm:text-xs md:text-sm max-w-md mx-auto leading-relaxed px-2">
           사주오행 만세력의 명학적 본질, 별자리의 깊이 있는 기질, 그리고 일상 대화 패턴인 MBTI를 조합하여 **연인, 친구, 동료** 관계에 따른 입체적인 해설을 제공해 드립니다.
         </p>
-        <div class="pt-4">
+        <div class="pt-2 sm:pt-4">
           <button
             @click="errorMsg = ''; step = 'p1_info';"
-            class="w-full md:w-auto px-10 py-4 bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 text-white font-extrabold text-base rounded-2xl shadow-xl hover:shadow-purple-900/50 hover:-translate-y-0.5 transition-all duration-200"
+            class="w-full sm:w-auto px-8 sm:px-10 py-3.5 sm:py-4 bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 text-white font-extrabold text-sm sm:text-base rounded-2xl shadow-xl hover:shadow-purple-900/50 hover:-translate-y-0.5 transition-all duration-200"
           >
             우주적 탐사 시작하기 🚀
           </button>
@@ -462,35 +462,35 @@
 
     <!-- STEP 2: PLAYER 1 INPUT -->
     <template x-if="step === 'p1_info'">
-      <div class="space-y-6">
+      <div class="space-y-4 sm:space-y-6">
         <div class="flex justify-between items-center border-b pb-3 border-slate-800">
-          <span class="text-xs font-bold text-pink-400 tracking-widest uppercase">First Partner</span>
-          <span class="text-xs px-2.5 py-1 bg-violet-950 text-violet-300 rounded-md font-extrabold">Step 1 / 2</span>
+          <span class="text-[10px] sm:text-xs font-bold text-pink-400 tracking-widest uppercase">First Partner</span>
+          <span class="text-[10px] sm:text-xs px-2 py-0.5 bg-violet-950 text-violet-300 rounded font-extrabold">Step 1 / 2</span>
         </div>
 
-        <h3 class="text-lg font-extrabold text-white">
+        <h3 class="text-base sm:text-lg font-extrabold text-white">
           첫 번째 파트너의 생일시와 MBTI는 무엇인가요? ✍️
         </h3>
 
-        <div class="space-y-4">
+        <div class="space-y-3 sm:space-y-4">
           <!-- Name -->
           <div>
-            <label class="block text-[11px] font-bold text-slate-400 uppercase mb-1">이름 혹은 닉네임</label>
+            <label class="block text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase mb-1">이름 혹은 닉네임</label>
             <input
               type="text"
               placeholder="예: 홍길동, 냥이"
               x-model="p1.name"
-              class="w-full px-4 py-3 rounded-xl border border-slate-800 focus:border-pink-500/50 bg-slate-950 focus:outline-none focus:ring-1 focus:ring-pink-500/30 text-white text-sm"
+              class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-slate-800 focus:border-pink-500/50 bg-slate-950 focus:outline-none focus:ring-1 focus:ring-pink-500/30 text-white text-xs sm:text-sm"
             />
           </div>
 
           <!-- Date -->
           <div>
-            <label class="block text-[11px] font-bold text-slate-400 uppercase mb-1">태어난 날짜 (양력 기준)</label>
-            <div class="grid grid-cols-3 gap-2">
+            <label class="block text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase mb-1">태어난 날짜 (양력 기준)</label>
+            <div class="grid grid-cols-3 gap-1.5 sm:gap-2">
               <select
                 x-model="p1.year"
-                class="px-3 py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs md:text-sm focus:outline-none"
+                class="px-2 sm:px-3 py-2.5 sm:py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs sm:text-sm focus:outline-none"
               >
                 <template x-for="y in years">
                   <option :value="y" x-text="y + '년'"></option>
@@ -498,7 +498,7 @@
               </select>
               <select
                 x-model="p1.month"
-                class="px-3 py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs md:text-sm focus:outline-none"
+                class="px-2 sm:px-3 py-2.5 sm:py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs sm:text-sm focus:outline-none"
               >
                 <template x-for="m in months">
                   <option :value="m" x-text="m + '월'"></option>
@@ -506,7 +506,7 @@
               </select>
               <select
                 x-model="p1.day"
-                class="px-3 py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs md:text-sm focus:outline-none"
+                class="px-2 sm:px-3 py-2.5 sm:py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs sm:text-sm focus:outline-none"
               >
                 <template x-for="d in days">
                   <option :value="d" x-text="d + '일'"></option>
@@ -517,10 +517,10 @@
 
           <!-- Saju Hour Pick -->
           <div>
-            <label class="block text-[11px] font-bold text-slate-400 uppercase mb-1">태어난 전통 시(時시) - 만세력 시간대 정밀 보정</label>
+            <label class="block text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase mb-1">태어난 전통 시(時시) - 만세력 시간대 정밀 보정</label>
             <select
               x-model="p1.hour"
-              class="w-full px-3 py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs md:text-sm focus:outline-none focus:ring-1 focus:ring-pink-500/30"
+              class="w-full px-2 sm:px-3 py-2.5 sm:py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs sm:text-sm focus:outline-none focus:ring-1 focus:ring-pink-500/30"
             >
               <template x-for="st in SAJU_TIMES">
                 <option :value="st.value" x-text="st.label"></option>
@@ -530,20 +530,20 @@
 
           <!-- MBTI Grid selection -->
           <div>
-            <label class="block text-[11px] font-bold text-slate-400 uppercase mb-1.5">MBTI 유형 선택</label>
-            <div class="grid grid-cols-4 gap-2 text-center bg-slate-950 p-3 rounded-2xl border border-slate-800">
+            <label class="block text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase mb-1.5">MBTI 유형 선택</label>
+            <div class="grid grid-cols-4 gap-1 sm:gap-2 text-center bg-slate-950 p-2 sm:p-3 rounded-2xl border border-slate-800">
               <div class="flex flex-col gap-1">
                 <button
                   type="button"
                   @click="handleMbtiChange('p1', 0, 'E')"
                   :class="p1.mbti[0] === 'E' ? 'bg-gradient-to-r from-pink-500 to-violet-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >E</button>
                 <button
                   type="button"
                   @click="handleMbtiChange('p1', 0, 'I')"
                   :class="p1.mbti[0] === 'I' ? 'bg-gradient-to-r from-pink-500 to-violet-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >I</button>
               </div>
 
@@ -552,13 +552,13 @@
                   type="button"
                   @click="handleMbtiChange('p1', 1, 'S')"
                   :class="p1.mbti[1] === 'S' ? 'bg-gradient-to-r from-pink-500 to-violet-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >S</button>
                 <button
                   type="button"
                   @click="handleMbtiChange('p1', 1, 'N')"
                   :class="p1.mbti[1] === 'N' ? 'bg-gradient-to-r from-pink-500 to-violet-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >N</button>
               </div>
 
@@ -567,13 +567,13 @@
                   type="button"
                   @click="handleMbtiChange('p1', 2, 'T')"
                   :class="p1.mbti[2] === 'T' ? 'bg-gradient-to-r from-pink-500 to-violet-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >T</button>
                 <button
                   type="button"
                   @click="handleMbtiChange('p1', 2, 'F')"
                   :class="p1.mbti[2] === 'F' ? 'bg-gradient-to-r from-pink-500 to-violet-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >F</button>
               </div>
 
@@ -582,13 +582,13 @@
                   type="button"
                   @click="handleMbtiChange('p1', 3, 'J')"
                   :class="p1.mbti[3] === 'J' ? 'bg-gradient-to-r from-pink-500 to-violet-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >J</button>
                 <button
                   type="button"
                   @click="handleMbtiChange('p1', 3, 'P')"
                   :class="p1.mbti[3] === 'P' ? 'bg-gradient-to-r from-pink-500 to-violet-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >P</button>
               </div>
             </div>
@@ -596,14 +596,14 @@
           </div>
         </div>
 
-        <div class="pt-4 flex gap-3">
+        <div class="pt-2 sm:pt-4 flex gap-2 sm:gap-3">
           <button
             @click="errorMsg = ''; step = 'welcome';"
-            class="px-5 py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl font-bold text-xs md:text-sm transition-all"
+            class="px-4 sm:px-5 py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl font-bold text-xs sm:text-sm transition-all"
           >이전</button>
           <button
             @click="goToP2Info()"
-            class="flex-grow py-3 bg-gradient-to-r from-violet-600 to-pink-500 text-white font-extrabold rounded-xl shadow-md hover:brightness-110 transition-all text-xs md:text-sm"
+            class="flex-grow py-3 bg-gradient-to-r from-violet-600 to-pink-500 text-white font-extrabold rounded-xl shadow-md hover:brightness-110 transition-all text-xs sm:text-sm"
           >상대방 정보 입력하기 👉</button>
         </div>
       </div>
@@ -611,35 +611,35 @@
 
     <!-- STEP 3: PLAYER 2 INPUT -->
     <template x-if="step === 'p2_info'">
-      <div class="space-y-6">
+      <div class="space-y-4 sm:space-y-6">
         <div class="flex justify-between items-center border-b pb-3 border-slate-800">
-          <span class="text-xs font-bold text-amber-300 tracking-widest uppercase">Second Partner</span>
-          <span class="text-xs px-2.5 py-1 bg-violet-950 text-violet-300 rounded-md font-extrabold">Step 2 / 2</span>
+          <span class="text-[10px] sm:text-xs font-bold text-amber-300 tracking-widest uppercase">Second Partner</span>
+          <span class="text-[10px] sm:text-xs px-2 py-0.5 bg-violet-950 text-violet-300 rounded font-extrabold">Step 2 / 2</span>
         </div>
 
-        <h3 class="text-lg font-extrabold text-white">
+        <h3 class="text-base sm:text-lg font-extrabold text-white">
           두 번째 파트너(상대방)의 정보도 입력해 주세요 ✍️
         </h3>
 
-        <div class="space-y-4">
+        <div class="space-y-3 sm:space-y-4">
           <!-- Name -->
           <div>
-            <label class="block text-[11px] font-bold text-slate-400 uppercase mb-1">상대방 이름 혹은 애칭</label>
+            <label class="block text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase mb-1">상대방 이름 혹은 애칭</label>
             <input
               type="text"
               placeholder="예: 성춘향, 이몽룡"
               x-model="p2.name"
-              class="w-full px-4 py-3 rounded-xl border border-slate-800 focus:border-amber-500/50 bg-slate-950 focus:outline-none focus:ring-1 focus:ring-amber-500/30 text-white text-sm"
+              class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-slate-800 focus:border-amber-500/50 bg-slate-950 focus:outline-none focus:ring-1 focus:ring-amber-500/30 text-white text-xs sm:text-sm"
             />
           </div>
 
           <!-- Date -->
           <div>
-            <label class="block text-[11px] font-bold text-slate-400 uppercase mb-1">태어난 날짜 (양력 기준)</label>
-            <div class="grid grid-cols-3 gap-2">
+            <label class="block text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase mb-1">태어난 날짜 (양력 기준)</label>
+            <div class="grid grid-cols-3 gap-1.5 sm:gap-2">
               <select
                 x-model="p2.year"
-                class="px-3 py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs md:text-sm focus:outline-none"
+                class="px-2 sm:px-3 py-2.5 sm:py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs sm:text-sm focus:outline-none"
               >
                 <template x-for="y in years">
                   <option :value="y" x-text="y + '년'"></option>
@@ -647,7 +647,7 @@
               </select>
               <select
                 x-model="p2.month"
-                class="px-3 py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs md:text-sm focus:outline-none"
+                class="px-2 sm:px-3 py-2.5 sm:py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs sm:text-sm focus:outline-none"
               >
                 <template x-for="m in months">
                   <option :value="m" x-text="m + '월'"></option>
@@ -655,7 +655,7 @@
               </select>
               <select
                 x-model="p2.day"
-                class="px-3 py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs md:text-sm focus:outline-none"
+                class="px-2 sm:px-3 py-2.5 sm:py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs sm:text-sm focus:outline-none"
               >
                 <template x-for="d in days">
                   <option :value="d" x-text="d + '일'"></option>
@@ -666,10 +666,10 @@
 
           <!-- Saju Hour Pick -->
           <div>
-            <label class="block text-[11px] font-bold text-slate-400 uppercase mb-1">태어난 전통 시(時시)</label>
+            <label class="block text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase mb-1">태어난 전통 시(時시)</label>
             <select
               x-model="p2.hour"
-              class="w-full px-3 py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs md:text-sm focus:outline-none focus:ring-1 focus:ring-amber-500/30"
+              class="w-full px-2 sm:px-3 py-2.5 sm:py-3 rounded-xl border border-slate-800 bg-slate-950 text-white text-xs sm:text-sm focus:outline-none focus:ring-1 focus:ring-amber-500/30"
             >
               <template x-for="st in SAJU_TIMES">
                 <option :value="st.value" x-text="st.label"></option>
@@ -679,20 +679,20 @@
 
           <!-- MBTI Grid selection -->
           <div>
-            <label class="block text-[11px] font-bold text-slate-400 uppercase mb-1.5">상대방 MBTI 유형 선택</label>
-            <div class="grid grid-cols-4 gap-2 text-center bg-slate-950 p-3 rounded-2xl border border-slate-800">
+            <label class="block text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase mb-1.5">상대방 MBTI 유형 선택</label>
+            <div class="grid grid-cols-4 gap-1 sm:gap-2 text-center bg-slate-950 p-2 sm:p-3 rounded-2xl border border-slate-800">
               <div class="flex flex-col gap-1">
                 <button
                   type="button"
                   @click="handleMbtiChange('p2', 0, 'E')"
                   :class="p2.mbti[0] === 'E' ? 'bg-gradient-to-r from-amber-500 to-pink-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >E</button>
                 <button
                   type="button"
                   @click="handleMbtiChange('p2', 0, 'I')"
                   :class="p2.mbti[0] === 'I' ? 'bg-gradient-to-r from-amber-500 to-pink-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >I</button>
               </div>
 
@@ -701,13 +701,13 @@
                   type="button"
                   @click="handleMbtiChange('p2', 1, 'S')"
                   :class="p2.mbti[1] === 'S' ? 'bg-gradient-to-r from-amber-500 to-pink-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >S</button>
                 <button
                   type="button"
                   @click="handleMbtiChange('p2', 1, 'N')"
                   :class="p2.mbti[1] === 'N' ? 'bg-gradient-to-r from-amber-500 to-pink-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >N</button>
               </div>
 
@@ -716,13 +716,13 @@
                   type="button"
                   @click="handleMbtiChange('p2', 2, 'T')"
                   :class="p2.mbti[2] === 'T' ? 'bg-gradient-to-r from-amber-500 to-pink-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >T</button>
                 <button
                   type="button"
                   @click="handleMbtiChange('p2', 2, 'F')"
                   :class="p2.mbti[2] === 'F' ? 'bg-gradient-to-r from-amber-500 to-pink-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >F</button>
               </div>
 
@@ -731,13 +731,13 @@
                   type="button"
                   @click="handleMbtiChange('p2', 3, 'J')"
                   :class="p2.mbti[3] === 'J' ? 'bg-gradient-to-r from-amber-500 to-pink-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >J</button>
                 <button
                   type="button"
                   @click="handleMbtiChange('p2', 3, 'P')"
                   :class="p2.mbti[3] === 'P' ? 'bg-gradient-to-r from-amber-500 to-pink-500 text-white shadow' : 'bg-slate-900 text-slate-500'"
-                  class="py-1.5 rounded-lg text-xs font-black transition-all"
+                  class="py-1.5 sm:py-2 rounded-lg text-xs font-black transition-all"
                 >P</button>
               </div>
             </div>
@@ -745,14 +745,14 @@
           </div>
         </div>
 
-        <div class="pt-4 flex gap-3">
+        <div class="pt-2 sm:pt-4 flex gap-2 sm:gap-3">
           <button
             @click="errorMsg = ''; step = 'p1_info';"
-            class="px-5 py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl font-bold text-xs md:text-sm transition-all"
+            class="px-4 sm:px-5 py-3 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-xl font-bold text-xs sm:text-sm transition-all"
           >이전</button>
           <button
             @click="startSajuCalculation()"
-            class="flex-grow py-3 bg-gradient-to-r from-amber-500 to-rose-500 text-white font-extrabold rounded-xl shadow-lg hover:brightness-110 transition-all text-xs md:text-sm"
+            class="flex-grow py-3 bg-gradient-to-r from-amber-500 to-rose-500 text-white font-extrabold rounded-xl shadow-lg hover:brightness-110 transition-all text-xs sm:text-sm"
           >멀티버설 매칭 지수 분석 가동! 🔮</button>
         </div>
       </div>
@@ -760,42 +760,42 @@
 
     <!-- STEP 4: DETAILED IMMERSIVE RESULTS -->
     <template x-if="step === 'result' && result">
-      <div class="space-y-8">
+      <div class="space-y-6 sm:space-y-8">
         
         <!-- COMPATIBILITY CIRCLE SPEEDOMETER -->
-        <div class="text-center space-y-4">
-          <div class="relative w-44 h-44 mx-auto flex items-center justify-center">
+        <div class="text-center space-y-3 sm:space-y-4">
+          <div class="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto flex items-center justify-center">
             <svg class="w-full h-full transform -rotate-90">
               <circle
-                cx="88"
-                cy="88"
-                r="75"
+                cx="50%"
+                cy="50%"
+                r="38%"
                 class="stroke-slate-800"
-                stroke-width="10"
+                stroke-width="8"
                 fill="transparent"
               />
               <circle
-                cx="88"
-                cy="88"
-                r="75"
+                cx="50%"
+                cy="50%"
+                r="38%"
                 class="stroke-gradient"
                 :stroke="result.score >= 82 ? '#f43f5e' : result.score >= 68 ? '#a855f7' : '#f59e0b'"
-                stroke-width="10"
+                stroke-width="8"
                 fill="transparent"
-                stroke-dasharray="471"
-                :stroke-dashoffset="471 - (471 * result.score) / 100"
+                stroke-dasharray="300"
+                :stroke-dashoffset="300 - (300 * result.score) / 100"
                 stroke-linecap="round"
-                style="transition: stroke-dashoffset 1.2s ease-out"
+                style="transition: stroke-dashoffset 1.2s ease-out; transform-origin: center;"
               />
             </svg>
             <!-- Center score -->
             <div class="absolute inset-0 flex flex-col items-center justify-center">
-              <span class="text-5xl font-black text-white tracking-tighter" x-text="result.score + '%'"></span>
-              <span class="text-[10px] font-extrabold text-pink-400 tracking-widest uppercase mt-0.5">Synergy Level</span>
+              <span class="text-3xl sm:text-5xl font-black text-white tracking-tighter" x-text="result.score + '%'"></span>
+              <span class="text-[9px] sm:text-[10px] font-extrabold text-pink-400 tracking-widest uppercase mt-0.5">Synergy Level</span>
             </div>
           </div>
-          <div>
-            <h3 class="text-xl md:text-2xl font-black text-white tracking-tight leading-snug" x-text="result.analysis.title"></h3>
+          <div class="px-2">
+            <h3 class="text-base sm:text-xl md:text-2xl font-black text-white tracking-tight leading-snug" x-text="result.analysis.title"></h3>
           </div>
         </div>
 
@@ -803,66 +803,66 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <!-- Partner 1 Details -->
           <div class="bg-slate-950/70 border border-slate-800 p-4 rounded-2xl relative overflow-hidden">
-            <div class="absolute -right-2 -top-2 text-6xl opacity-10" x-text="result.user1.saju.zodiac.emoji"></div>
-            <div class="text-[10px] font-bold text-pink-400 uppercase tracking-wider">FIRST PARTNER</div>
-            <div class="text-lg font-black text-white mt-1" x-text="result.user1.name"></div>
+            <div class="absolute -right-2 -top-2 text-5xl sm:text-6xl opacity-10" x-text="result.user1.saju.zodiac.emoji"></div>
+            <div class="text-[9px] sm:text-[10px] font-bold text-pink-400 uppercase tracking-wider">FIRST PARTNER</div>
+            <div class="text-base sm:text-lg font-black text-white mt-1" x-text="result.user1.name"></div>
             
             <div class="mt-2.5 flex flex-wrap gap-1">
-              <span class="px-2 py-0.5 bg-pink-950/50 text-pink-300 border border-pink-500/20 rounded-md font-extrabold text-[10px]" x-text="result.user1.mbti"></span>
-              <span class="px-2 py-0.5 bg-amber-950/50 text-amber-300 border border-amber-500/20 rounded-md font-extrabold text-[10px]" x-text="result.user1.saju.zodiac.name + ' ' + result.user1.saju.zodiac.emoji"></span>
-              <span class="px-2 py-0.5 bg-emerald-950/50 text-emerald-300 border border-emerald-500/20 rounded-md font-extrabold text-[10px]" x-text="ELEMENTS_INFO[result.user1.saju.mainElement].name + ' 일간'"></span>
+              <span class="px-2 py-0.5 bg-pink-950/50 text-pink-300 border border-pink-500/20 rounded-md font-extrabold text-[9px] sm:text-[10px]" x-text="result.user1.mbti"></span>
+              <span class="px-2 py-0.5 bg-amber-950/50 text-amber-300 border border-amber-500/20 rounded-md font-extrabold text-[9px] sm:text-[10px]" x-text="result.user1.saju.zodiac.name + ' ' + result.user1.saju.zodiac.emoji"></span>
+              <span class="px-2 py-0.5 bg-emerald-950/50 text-emerald-300 border border-emerald-500/20 rounded-md font-extrabold text-[9px] sm:text-[10px]" x-text="ELEMENTS_INFO[result.user1.saju.mainElement].name + ' 일간'"></span>
             </div>
 
             <!-- Saju 4 Pillars Table -->
             <div class="mt-4 grid grid-cols-4 gap-1 text-center bg-slate-900/60 rounded-xl p-2 border border-slate-800">
               <div>
                 <div class="text-[9px] text-slate-500">년주</div>
-                <div class="font-bold text-xs text-slate-200" x-text="result.user1.saju.yearPillar.stem.han + result.user1.saju.yearPillar.branch.han"></div>
+                <div class="font-bold text-[11px] sm:text-xs text-slate-200" x-text="result.user1.saju.yearPillar.stem.han + result.user1.saju.yearPillar.branch.han"></div>
               </div>
               <div>
                 <div class="text-[9px] text-slate-500">월주</div>
-                <div class="font-bold text-xs text-slate-200" x-text="result.user1.saju.monthPillar.stem.han + result.user1.saju.monthPillar.branch.han"></div>
+                <div class="font-bold text-[11px] sm:text-xs text-slate-200" x-text="result.user1.saju.monthPillar.stem.han + result.user1.saju.monthPillar.branch.han"></div>
               </div>
               <div>
                 <div class="text-[9px] text-slate-500">일주</div>
-                <div class="font-bold text-xs text-pink-400" x-text="result.user1.saju.dayPillar.stem.han + result.user1.saju.dayPillar.branch.han"></div>
+                <div class="font-bold text-[11px] sm:text-xs text-pink-400" x-text="result.user1.saju.dayPillar.stem.han + result.user1.saju.dayPillar.branch.han"></div>
               </div>
               <div>
                 <div class="text-[9px] text-slate-500">시주</div>
-                <div class="font-bold text-xs text-slate-200" x-text="result.user1.saju.isTimeUnknown ? '?' : result.user1.saju.hourPillar.stem.han + result.user1.saju.hourPillar.branch.han"></div>
+                <div class="font-bold text-[11px] sm:text-xs text-slate-200" x-text="result.user1.saju.isTimeUnknown ? '?' : result.user1.saju.hourPillar.stem.han + result.user1.saju.hourPillar.branch.han"></div>
               </div>
             </div>
           </div>
 
           <!-- Partner 2 Details -->
           <div class="bg-slate-950/70 border border-slate-800 p-4 rounded-2xl relative overflow-hidden">
-            <div class="absolute -right-2 -top-2 text-6xl opacity-10" x-text="result.user2.saju.zodiac.emoji"></div>
-            <div class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">SECOND PARTNER</div>
-            <div class="text-lg font-black text-white mt-1" x-text="result.user2.name"></div>
+            <div class="absolute -right-2 -top-2 text-5xl sm:text-6xl opacity-10" x-text="result.user2.saju.zodiac.emoji"></div>
+            <div class="text-[9px] sm:text-[10px] font-bold text-amber-400 uppercase tracking-wider">SECOND PARTNER</div>
+            <div class="text-base sm:text-lg font-black text-white mt-1" x-text="result.user2.name"></div>
             
             <div class="mt-2.5 flex flex-wrap gap-1">
-              <span class="px-2 py-0.5 bg-amber-950/50 text-amber-300 border border-amber-500/20 rounded-md font-extrabold text-[10px]" x-text="result.user2.mbti"></span>
-              <span class="px-2 py-0.5 bg-pink-950/50 text-pink-300 border border-pink-500/20 rounded-md font-extrabold text-[10px]" x-text="result.user2.saju.zodiac.name + ' ' + result.user2.saju.zodiac.emoji"></span>
-              <span class="px-2 py-0.5 bg-emerald-950/50 text-emerald-300 border border-emerald-500/20 rounded-md font-extrabold text-[10px]" x-text="ELEMENTS_INFO[result.user2.saju.mainElement].name + ' 일간'"></span>
+              <span class="px-2 py-0.5 bg-amber-950/50 text-amber-300 border border-amber-500/20 rounded-md font-extrabold text-[9px] sm:text-[10px]" x-text="result.user2.mbti"></span>
+              <span class="px-2 py-0.5 bg-pink-950/50 text-pink-300 border border-pink-500/20 rounded-md font-extrabold text-[9px] sm:text-[10px]" x-text="result.user2.saju.zodiac.name + ' ' + result.user2.saju.zodiac.emoji"></span>
+              <span class="px-2 py-0.5 bg-emerald-950/50 text-emerald-300 border border-emerald-500/20 rounded-md font-extrabold text-[9px] sm:text-[10px]" x-text="ELEMENTS_INFO[result.user2.saju.mainElement].name + ' 일간'"></span>
             </div>
 
             <!-- Saju 4 Pillars Table -->
             <div class="mt-4 grid grid-cols-4 gap-1 text-center bg-slate-900/60 rounded-xl p-2 border border-slate-800">
               <div>
                 <div class="text-[9px] text-slate-500">년주</div>
-                <div class="font-bold text-xs text-slate-200" x-text="result.user2.saju.yearPillar.stem.han + result.user2.saju.yearPillar.branch.han"></div>
+                <div class="font-bold text-[11px] sm:text-xs text-slate-200" x-text="result.user2.saju.yearPillar.stem.han + result.user2.saju.yearPillar.branch.han"></div>
               </div>
               <div>
                 <div class="text-[9px] text-slate-500">월주</div>
-                <div class="font-bold text-xs text-slate-200" x-text="result.user2.saju.monthPillar.stem.han + result.user2.saju.monthPillar.branch.han"></div>
+                <div class="font-bold text-[11px] sm:text-xs text-slate-200" x-text="result.user2.saju.monthPillar.stem.han + result.user2.saju.monthPillar.branch.han"></div>
               </div>
               <div>
                 <div class="text-[9px] text-slate-500">일주</div>
-                <div class="font-bold text-xs text-pink-400" x-text="result.user2.saju.dayPillar.stem.han + result.user2.saju.dayPillar.branch.han"></div>
+                <div class="font-bold text-[11px] sm:text-xs text-pink-400" x-text="result.user2.saju.dayPillar.stem.han + result.user2.saju.dayPillar.branch.han"></div>
               </div>
               <div>
                 <div class="text-[9px] text-slate-500">시주</div>
-                <div class="font-bold text-xs text-slate-200" x-text="result.user2.saju.isTimeUnknown ? '?' : result.user2.saju.hourPillar.stem.han + result.user2.saju.hourPillar.branch.han"></div>
+                <div class="font-bold text-[11px] sm:text-xs text-slate-200" x-text="result.user2.saju.isTimeUnknown ? '?' : result.user2.saju.hourPillar.stem.han + result.user2.saju.hourPillar.branch.han"></div>
               </div>
             </div>
           </div>
@@ -870,14 +870,14 @@
 
         <!-- INTERACTIVE RELATIONSHIP TAB SELECTION -->
         <div class="bg-slate-950/40 p-1.5 rounded-2xl border border-slate-800/80">
-          <label class="block text-center text-[10px] font-extrabold text-slate-500 uppercase tracking-widest mb-1.5">
+          <label class="block text-center text-[9px] sm:text-[10px] font-extrabold text-slate-500 uppercase tracking-widest mb-1.5">
             원하는 관계 타입을 클릭해서 분석결과를 전환해 보세요!
           </label>
           <div class="grid grid-cols-3 gap-1">
             <button
               @click="relationshipType = 'lover'"
               :class="relationshipType === 'lover' ? 'bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow' : 'bg-transparent text-slate-400 hover:text-slate-200'"
-              class="py-2.5 rounded-xl text-xs font-bold transition-all flex flex-col sm:flex-row items-center justify-center gap-1"
+              class="py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs font-bold transition-all flex flex-col sm:flex-row items-center justify-center gap-1"
             >
               <span>❤️</span>
               <span>연인/커플</span>
@@ -885,7 +885,7 @@
             <button
               @click="relationshipType = 'friend'"
               :class="relationshipType === 'friend' ? 'bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow' : 'bg-transparent text-slate-400 hover:text-slate-200'"
-              class="py-2.5 rounded-xl text-xs font-bold transition-all flex flex-col sm:flex-row items-center justify-center gap-1"
+              class="py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs font-bold transition-all flex flex-col sm:flex-row items-center justify-center gap-1"
             >
               <span>⭐</span>
               <span>베프/친구</span>
@@ -893,7 +893,7 @@
             <button
               @click="relationshipType = 'colleague'"
               :class="relationshipType === 'colleague' ? 'bg-gradient-to-r from-cyan-600 to-teal-500 text-white shadow' : 'bg-transparent text-slate-400 hover:text-slate-200'"
-              class="py-2.5 rounded-xl text-xs font-bold transition-all flex flex-col sm:flex-row items-center justify-center gap-1"
+              class="py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs font-bold transition-all flex flex-col sm:flex-row items-center justify-center gap-1"
             >
               <span>💼</span>
               <span>동료/비즈니스</span>
@@ -902,56 +902,56 @@
         </div>
 
         <!-- RELATIONSHIP-SPECIFIC DETAILED REPORT CARD -->
-        <div class="bg-slate-950/40 border border-slate-800/80 rounded-2xl p-5 md:p-6 space-y-6 transition-all duration-300">
+        <div class="bg-slate-950/40 border border-slate-800/80 rounded-2xl p-4 sm:p-5 md:p-6 space-y-5 sm:space-y-6 transition-all duration-300">
           <!-- Saju Base text (Common) -->
           <div>
             <h4 class="text-xs font-extrabold text-amber-400 flex items-center gap-1.5 mb-1.5">
               <span>☯️</span> 타고난 선천적 기운 (사주 오행 조화)
             </h4>
-            <p class="text-xs md:text-sm text-slate-300 leading-relaxed" x-text="result.analysis.sajuIntroText"></p>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed" x-text="result.analysis.sajuIntroText"></p>
           </div>
 
           <!-- Dynamic Content based on Relationship Selection -->
-          <div class="border-t border-slate-800/80 pt-5 space-y-5">
+          <div class="border-t border-slate-800/80 pt-4 sm:pt-5 space-y-4 sm:space-y-5">
             <div>
               <h4 class="text-xs font-extrabold text-purple-300 flex items-center gap-1.5 mb-2">
                 <template x-if="relationshipType === 'lover'"><span>💬 연인으로서의 관계 깊이</span></template>
                 <template x-if="relationshipType === 'friend'"><span>💬 친구로서의 동반자 지수</span></template>
                 <template x-if="relationshipType === 'colleague'"><span>💬 비즈니스 동업 시너지</span></template>
               </h4>
-              <p class="text-xs md:text-sm text-slate-300 leading-relaxed" x-text="result.analysis[relationshipType].intro"></p>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed" x-text="result.analysis[relationshipType].intro"></p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-              <div class="p-4 bg-rose-950/20 border border-rose-500/20 rounded-xl space-y-1.5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 pt-2">
+              <div class="p-3 sm:p-4 bg-rose-950/20 border border-rose-500/20 rounded-xl space-y-1.5">
                 <div class="text-xs font-bold text-rose-400 flex items-center gap-1">
                   <span>💥</span> 이렇게 하면 파국으로!
                 </div>
-                <p class="text-[11px] text-rose-300 leading-relaxed" x-text="result.analysis[relationshipType].disaster"></p>
+                <p class="text-[11px] sm:text-xs text-rose-300 leading-relaxed" x-text="result.analysis[relationshipType].disaster"></p>
               </div>
 
-              <div class="p-4 bg-emerald-950/20 border border-emerald-500/20 rounded-xl space-y-1.5">
+              <div class="p-3 sm:p-4 bg-emerald-950/20 border border-emerald-500/20 rounded-xl space-y-1.5">
                 <div class="text-xs font-bold text-emerald-400 flex items-center gap-1">
                   <span>✨</span> 더욱 잘 맞는 우주급 비책
                 </div>
-                <p class="text-[11px] text-emerald-300 leading-relaxed" x-text="result.analysis[relationshipType].booster"></p>
+                <p class="text-[11px] sm:text-xs text-emerald-300 leading-relaxed" x-text="result.analysis[relationshipType].booster"></p>
               </div>
             </div>
           </div>
         </div>
 
         <!-- ASTROLOGY (ZODIAC) DEEP EXPLORATION -->
-        <div class="p-5 bg-gradient-to-r from-violet-950/40 to-pink-950/30 border border-purple-500/20 rounded-2xl space-y-3">
-          <h4 class="text-sm font-black text-purple-300 flex items-center gap-1.5">
+        <div class="p-4 sm:p-5 bg-gradient-to-r from-violet-950/40 to-pink-950/30 border border-purple-500/20 rounded-2xl space-y-3">
+          <h4 class="text-xs sm:text-sm font-black text-purple-300 flex items-center gap-1.5">
             <span>🌌</span> 우주적 성별 별자리 원소 궁합
           </h4>
-          <p class="text-xs text-slate-400">
+          <p class="text-[11px] sm:text-xs text-slate-400">
             두 분의 수호성 별자리는 각각 <strong x-text="result.user1.saju.zodiac.name + ' (' + ASTRO_ELEMENTS[result.user1.saju.zodiac.element].name + ')'"></strong>과 <strong x-text="result.user2.saju.zodiac.name + ' (' + ASTRO_ELEMENTS[result.user2.saju.zodiac.element].name + ')'"></strong> 입니다.
           </p>
           
-          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800/80">
-            <div class="text-sm font-bold text-amber-300 flex items-center gap-1.5 mb-1.5" x-text="result.astroComb.title"></div>
-            <p class="text-xs text-slate-300 leading-relaxed" x-text="result.astroComb.desc"></p>
+          <div class="p-3 sm:p-4 bg-slate-950/60 rounded-xl border border-slate-800/80">
+            <div class="text-xs sm:text-sm font-bold text-amber-300 flex items-center gap-1.5 mb-1.5" x-text="result.astroComb.title"></div>
+            <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed" x-text="result.astroComb.desc"></p>
           </div>
         </div>
 
@@ -959,7 +959,7 @@
         <div class="pt-2">
           <button
             @click="resetApp()"
-            class="w-full py-4 bg-slate-800 hover:bg-slate-700 text-white font-extrabold text-sm rounded-2xl transition-all shadow-md"
+            class="w-full py-3.5 sm:py-4 bg-slate-800 hover:bg-slate-700 text-white font-extrabold text-xs sm:text-sm rounded-2xl transition-all shadow-md"
           >
             다른 행성 탐사하러 가기 (새로고침) 🔄
           </button>
@@ -970,7 +970,7 @@
   </main>
 
   <!-- FOOTER COMMENTARY -->
-  <footer class="max-w-4xl mx-auto w-full text-center py-4 text-[9px] text-slate-500 font-light leading-relaxed">
+  <footer class="max-w-4xl mx-auto w-full text-center py-4 text-[9px] text-slate-500 font-light leading-relaxed px-2">
     본 검사 시스템에서 제공하는 사주 오행 정보는 천간과 지지의 배치를 역학적으로 축약 산정한 통계형 데이터이며, <br />
     연인 뿐만 아니라 다양한 인간 관계의 성격 융합과 조화를 재미있게 즐겨볼 수 있도록 기획된 고밀도 관계 오락용 가이드입니다. <br />
     © 2026 Cosmic Harmony Multi-verse Studio. All rights reserved.
